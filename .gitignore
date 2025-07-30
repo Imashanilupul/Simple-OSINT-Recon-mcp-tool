@@ -1,0 +1,56 @@
+venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit cache
+.streamlit/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Mac and system files
+.DS_Store
+Thumbs.db
+
+# Logs and local database
+*.log
+*.sqlite3
+
+# OS generated files
+ehthumbs.db
+Icon?
+
+# Local test results
+htmlcov/
+coverage.xml
+*.cover
+.cache/
+nosetests.xml
+*.prof
+
+# LangChain
+langchain.sqlite
+langchain.db
+*.jsonl
+
+# MCP server state
+*.mcpstate
