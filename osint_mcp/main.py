@@ -11,6 +11,7 @@ from tools.wigle_tool import wigle_bssid_lookup
 from tools.username_tracker import username_tracker
 from tools.image_metadata_tool import extract_image_metadata
 from tools.ip_scanner import scan_ip_ports
+from tools.port_Listner import tcp_port_listener
 
 
  
@@ -35,12 +36,21 @@ def run_username_tracker(username: str) -> str:
     """
     return username_tracker(username)
 
+#Done
 @mcp.tool()
 def run_ip_scanner(ip_address: str, start_port: int, end_port: int) -> str:
     """
     Run the IP scanner tool.
     """
     return scan_ip_ports(ip_address,start_port,end_port)
+
+#Done
+@mcp.tool()
+def run_tcp_port_listener(port: int, host: str) -> str:
+    """
+    Run the TCP port listener tool.
+    """
+    return tcp_port_listener(port, host)
 
 #under working
 @mcp.tool()
