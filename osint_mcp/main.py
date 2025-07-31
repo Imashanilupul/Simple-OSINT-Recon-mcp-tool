@@ -6,23 +6,20 @@ cd to the `examples/snippets/clients` directory and run:
 """
 
 from mcp.server.fastmcp import FastMCP
-from agent import build_osint_agent
+
 from tools.wigle_tool import wigle_bssid_lookup
 from tools.username_tracker import username_tracker
 from tools.image_metadata_tool import extract_image_metadata
+from tools.ip_scanner import scan_ip_ports
 
 
  
 # Create an MCP server
 mcp = FastMCP("OSINT MCP")
 
-@mcp.tool()
-def build_agent():
-    """
-    Build the OSINT agent with the specified tools and LLM.
-    """
-    return build_osint_agent()
 
+
+#Done
 @mcp.tool()
 def run_wigle_lookup(bssid: str) -> str:
     """
@@ -30,6 +27,7 @@ def run_wigle_lookup(bssid: str) -> str:
     """
     return wigle_bssid_lookup(bssid)
 
+#Done
 @mcp.tool()
 def run_username_tracker(username: str) -> str:
     """
@@ -37,6 +35,14 @@ def run_username_tracker(username: str) -> str:
     """
     return username_tracker(username)
 
+@mcp.tool()
+def run_ip_scanner(ip_address: str, start_port: int, end_port: int) -> str:
+    """
+    Run the IP scanner tool.
+    """
+    return scan_ip_ports(ip_address,start_port,end_port)
+
+#under working
 @mcp.tool()
 def run_image_metadata_extractor(path: str) -> str:
     """
