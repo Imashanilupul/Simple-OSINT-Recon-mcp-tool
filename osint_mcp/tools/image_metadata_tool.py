@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL.ExifTags import TAGS
 
-@mcp.tool()
+
 def extract_image_metadata(path: str) -> str:
     image = Image.open(path)
     exif_data = image._getexif()

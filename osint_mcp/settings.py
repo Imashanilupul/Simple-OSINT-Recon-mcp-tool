@@ -10,4 +10,3 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
     
 settings = Settings()
-print(settings.WIGLE_API_NAME)

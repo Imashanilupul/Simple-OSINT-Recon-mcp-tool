@@ -4,8 +4,9 @@ from tools.wigle_tool import wigle_bssid_lookup
 from tools.username_tracker import username_tracker
 from tools.image_metadata_tool import extract_image_metadata
 from settings import settings
+from mcp.server.fastmcp import FastMCP
 
-@mcp.tool()
+
 def build_osint_agent():
     llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.2, google_api_key=settings.GEMINI_API_KEY)
     

@@ -1,6 +1,6 @@
 import requests
 
-@mcp.tool()
+
 def username_tracker(username: str) -> str:
     platforms = ["https://github.com/", "https://twitter.com/", "https://instagram.com/"]
     found = []

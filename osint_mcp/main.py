@@ -12,8 +12,7 @@ from agent import build_osint_agent
 
 
 # Create an MCP server
-mcp = FastMCP(build_osint_agent)
+mcp = FastMCP("OSINT MCP", tools=[build_osint_agent()])
 
-if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+
 

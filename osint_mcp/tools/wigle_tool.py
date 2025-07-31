@@ -1,7 +1,7 @@
 import requests
 from settings import settings
 
-@mcp.tool()
+
 def wigle_bssid_lookup(bssid: str) -> str:
     url = "https://api.wigle.net/api/v2/network/search"
     params = {
