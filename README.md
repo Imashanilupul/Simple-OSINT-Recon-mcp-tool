@@ -7,9 +7,7 @@ A comprehensive Open Source Intelligence (OSINT) reconnaissance tool built as a 
 - **IP Port Scanner**: Scan IP addresses for open ports within specified ranges
 - **Wigle BSSID Lookup**: Query Wigle database for wireless network information
 - **Username Tracker**: Track usernames across multiple platforms and services
-- **TCP Port Listener**: Set up listeners on specified ports for network monitoring
-- **Phishing Detector**: Analyze URLs for potential phishing threats
-- **Image Metadata Extractor**: Extract EXIF and metadata from uploaded images
+
 
 ## 📋 Prerequisites
 
@@ -149,40 +147,7 @@ Track usernames across multiple platforms and social media services.
 Track username "johndoe123" across platforms
 ```
 
-### 4. TCP Port Listener
-Set up a TCP listener on a specified port for network monitoring.
 
-**Parameters:**
-- `port`: Port number to listen on
-- `host`: Host address (default: localhost)
-- `buffer_size`: Buffer size for data reception
-
-**Example Usage:**
-```
-Listen on port 8080 with host localhost and buffer size 1024
-```
-
-### 5. Phishing Detector
-Analyze URLs for potential phishing threats and malicious content.
-
-**Parameters:**
-- `url`: URL to analyze
-
-**Example Usage:**
-```
-Check if https://suspicious-site.com is a phishing site
-```
-
-### 6. Image Metadata Extractor
-Extract EXIF data and metadata from uploaded images.
-
-**Parameters:**
-- `image`: Image file (binary data)
-
-**Example Usage:**
-```
-Extract metadata from uploaded image file
-```
 
 ## 🔐 Configuration
 
@@ -227,13 +192,6 @@ simple-osint-recon-mcp-tool/
 │   ├── ip_scanner.py
 │   ├── wigle_tool.py
 │   ├── username_tracker.py
-│   ├── tcp_listener.py
-│   ├── phishing_detector.py
-│   └── metadata_extractor.py
-├── models/                # ML models and data
-│   └── phishing_detector_model.pkl
-└── logs/                  # Log files
-    └── osint_tool.log
 ```
 
 ## 🐛 Troubleshooting
