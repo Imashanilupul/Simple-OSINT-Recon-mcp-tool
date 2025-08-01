@@ -9,9 +9,10 @@ from mcp.server.fastmcp import FastMCP
 
 from tools.wigle_tool import wigle_bssid_lookup
 from tools.username_tracker import username_tracker
-from tools.image_metadata_tool import extract_image_metadata
+from tools.image_metadata_tool import extract_image_metadata 
 from tools.ip_scanner import scan_ip_ports
 from tools.port_Listner import tcp_port_listener
+from tools.phishing_detector_url import check_if_phishing
 
 
  
@@ -46,19 +47,27 @@ def run_ip_scanner(ip_address: str, start_port: int, end_port: int) -> str:
 
 #Done
 @mcp.tool()
-def run_tcp_port_listener(port: int, host: str) -> str:
+def run_tcp_port_listener(port: int, host: str,buffer_size:int) -> str:
     """
     Run the TCP port listener tool.
     """
-    return tcp_port_listener(port, host)
+    return tcp_port_listener(port, host, buffer_size)
+
+@mcp.tool()
+async def run_phishing_detector(url: str) -> str:
+    """
+    Run the phishing detector tool.
+    """
+    result = await check_if_phishing(url)
+    return result
 
 #under working
 @mcp.tool()
-def run_image_metadata_extractor(path: str) -> str:
+def run_image_metadata_extractor(image: bytes) -> str:
     """
     Run the image metadata extractor tool.
     """
-    return extract_image_metadata(path)
+    return extract_image_metadata(image)
 
 if __name__ == "__main__":
     # Start the MCP server
